@@ -1,13 +1,8 @@
-
 resource "aws_instance" "name" { 
-  instance_type = "m7i-flex.large"   # t3.micro is Free Tier eligible
+  instance_type = var.type     # using variable
   ami           = var.ami_id
 
   tags = {
     Name = "sana"
   }
-}
-
-resource "aws_s3_bucket" "name" {
-  bucket = "sananareshit123"
 }
