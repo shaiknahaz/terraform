@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "name" { 
-  instance_type = "t3.small"   # t3.micro is Free Tier eligible
+  instance_type = "m7i-flex.large"   # t3.micro is Free Tier eligible
   ami           = var.ami_id
 
   tags = {
