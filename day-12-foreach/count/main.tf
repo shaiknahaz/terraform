@@ -1,6 +1,6 @@
 # resource "aws_instance" "name" {
-#     ami = "ami-07860a2d7eb515d9a"
-#     instance_type = "t2.micro"
+#     ami = "ami-0d176f79571d18a8f"
+#     instance_type = "m7i-flex.large"
 #     count = 2
 #     # tags = {
 #     #   Name = "dev"
@@ -17,8 +17,8 @@ variable "env" {
 }
 
 resource "aws_instance" "name" {
-    ami = "ami-03695d52f0d883f65"
-    instance_type = "t3.micro"
+    ami = "ami-0d176f79571d18a8f"
+    instance_type = "m7i-flex.large"
     count = length(var.env)
     # tags = {
     #   Name = "dev"
